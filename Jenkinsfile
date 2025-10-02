@@ -25,8 +25,9 @@ pipeline {
             steps {
                 sh '''
                     echo "Test"
-                    ls -la
+                    ls -la build/
                     test -f build/index.html
+                    npm test
                 '''
             }
 
